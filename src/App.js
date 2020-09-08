@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './home/Home'
 import EntryAgen from './entryAgen/EntryAgen'
+import ViewAgen from './viewAgen/ViewAgen'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Fragment>
         <Route exact path={'/'} component={Home} />
         <Route exact path={'/entry-agen'} component={EntryAgen} />
+        <Route exact path={'/view-agen'} component={ViewAgen} />
       </Fragment>
     </Router>
   )
