@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import NavBar from '../components/NavBar'
 
 const EntryAgen = () => {
+  const successAdd = () => {
+    alert('Succes Add Data')
+  }
   return (
     <Fragment>
       <NavBar />
@@ -10,7 +13,7 @@ const EntryAgen = () => {
       </div>
 
       <div class="container">
-        <form>
+        <form onSubmit={successAdd}>
           <div class="form-group">
             <label for="exampleInputPassword1">Pilih Nama Agen</label>
             <select
@@ -18,6 +21,7 @@ const EntryAgen = () => {
               id="exampleFormControlSelect1"
               name="Level"
               style={{ height: 40 }}
+              required
               // onChange={(e) => onChange(e)}
             >
               <option value="">Nama Agen</option>
@@ -35,6 +39,7 @@ const EntryAgen = () => {
               id="exampleFormControlSelect1"
               name="Level"
               style={{ height: 40 }}
+              required
               // onChange={(e) => onChange(e)}
             >
               <option value="">Nama Atasan</option>
@@ -52,6 +57,7 @@ const EntryAgen = () => {
               class="form-control"
               placeholder="Tanggal"
               name="startDate"
+              required
             />
           </div>
 
@@ -62,6 +68,7 @@ const EntryAgen = () => {
               class="form-control"
               placeholder="Tanggal"
               name="endDate"
+              required
             />
           </div>
           <div class="form-check">

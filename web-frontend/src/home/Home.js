@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import NavBar from '../components/NavBar'
 
 const Home = () => {
+  const success = () => {
+    alert('Success Add Data')
+  }
   return (
     <Fragment>
       <NavBar />
@@ -10,7 +13,7 @@ const Home = () => {
       </div>
 
       <div class="container">
-        <form>
+        <form onSubmit={success}>
           <div class="form-group">
             <label for="exampleInputEmail1">No Lisensi</label>
             <input
@@ -19,6 +22,7 @@ const Home = () => {
               aria-describedby="emailHelp"
               placeholder="Nomor Lisensi"
               name="licenseNumber"
+              required
             />
           </div>
           <div class="form-group">
@@ -28,6 +32,7 @@ const Home = () => {
               class="form-control"
               placeholder="Nama Agen"
               name="agenName"
+              required
             />
           </div>
           <div class="form-group">
@@ -38,6 +43,7 @@ const Home = () => {
               name="Level"
               style={{ height: 40 }}
               // onChange={(e) => onChange(e)}
+              required
             >
               <option value="">Level</option>
               <option value="RM">RM</option>
@@ -54,6 +60,7 @@ const Home = () => {
               class="form-control"
               placeholder="Wilayah"
               name="area"
+              required
             />
           </div>
           <div class="form-check">
@@ -61,6 +68,7 @@ const Home = () => {
               type="checkbox"
               class="form-check-input"
               id="exampleCheck1"
+              required
             />
             <label class="form-check-label" for="exampleCheck1">
               Status Aktif
