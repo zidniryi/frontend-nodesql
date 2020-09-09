@@ -1,7 +1,21 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import NavBar from '../components/NavBar'
+import axios from 'axios'
 
 const ViewAgen = () => {
+  useEffect(() => {
+    getDataAgen()
+  }, [])
+
+  const getDataAgen = async () => {
+    try {
+      const res = await axios.get(`http://localhost:4040/agen/list`)
+      console.log(res)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <Fragment>
       <NavBar />
